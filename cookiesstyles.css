@@ -1,0 +1,271 @@
+/*
+    Author: Silvia Mariana Reyesvera Quijano - 000813686 
+    Date: October 4th, 2020
+
+    This code provides styling meant for both index.html and cookies.php
+*/
+
+/*index.html styles*/
+body {
+    /*image created with: flaticon.com/pattern/*/
+    background-image: url(images/goodluckBackground.png);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    font-family: Courier New, Courier, Verdana;
+    font-size: 1.25em;
+
+}
+
+#centerContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 50px;
+    background-color: rgb(37, 37, 37);
+    width: 80%;
+    margin: 35px auto;
+}
+
+#title {
+    grid-column: 1 /span 2;
+    grid-row: 1;
+    color: white;
+    text-align: center;
+    margin: 0 10%;
+    font-size: 1.5em;
+}
+
+#jarImageSide {
+    grid-column: 1;
+    grid-row: 2;
+    padding: 10% 10% 10% 10%;
+}
+
+#formSide {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0 10% 10% 0;
+    border-radius: 50px;
+    background-color: white;
+    padding: 5%;
+    text-align: center;
+}
+
+#backgroundImg {
+    background-color: black;
+    width: 382px;
+    height: 382px;
+    border-radius: 200px;
+}
+
+#jarImageSide img {
+    height: 10cm;
+    width: 10cm;
+    border-radius: 5cm;
+    padding-left: 2px;
+    padding-top: 2px;
+
+}
+
+#nameField,
+#amountField,
+#rangeField {
+    padding-bottom: 40px;
+}
+
+#nameField input {
+    font-size: 0.75em;
+    display: block;
+}
+
+#nameField label {
+    float: left;
+    text-align: right;
+    width: 100px;
+    padding-right: 10px;
+}
+
+#nameField label {
+    width: 30%;
+}
+
+#nameField input {
+    width: 50%;
+}
+
+#amountField label {
+    width: 100%;
+    display: block;
+}
+
+#amountField input {
+    width: 20%;
+}
+
+#rangeTitle {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+#submitField {
+    height: 140px;
+    width: 140px;
+    margin: 0 auto;
+}
+
+
+#submitField input {
+    border: none;
+    background-color: transparent;
+    font-family: Courier New, Courier, Verdana;
+    font-size: 1.25em;
+    position: relative;
+    text-align: center;
+    height: 140px;
+    width: 140px;
+}
+
+#submitField img {
+    position: absolute;
+}
+
+#hoverSubmitImg {
+    visibility: hidden;
+}
+
+#submitField:hover #normalSubmitImg {
+    visibility: hidden;
+}
+
+#submitField:hover #hoverSubmitImg {
+    visibility: visible;
+}
+
+
+/*cookies.php styles*/
+#header img {
+    height: 200px;
+    width: 200px;
+}
+
+#header h1 {
+    display: inline;
+    padding: auto 0;
+    vertical-align: middle;
+    padding-right: 80px;
+    font-size: 3em;
+    color: white;
+}
+
+#header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+    background-color: rgb(37, 37, 37);
+    border-radius: 100px;
+}
+
+#resultFlexBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+
+#cookieContainer {
+    height: 404px;
+    width: 404px;
+    border-radius: 202px;
+    margin: 30px;
+    padding-left: 4px;
+    padding-top: 4px;
+    position: relative;
+}
+
+#unbrokenCookie {
+    visibility: visible;
+    border-radius: 200px;
+    height: 400px;
+    width: 400px;
+    position: relative;
+}
+
+#brokenCookie {
+    display: none;
+    visibility: hidden;
+    border-radius: 200px;
+    height: 400px;
+    width: 400px;
+    position: relative;
+}
+
+#cookieContainer:hover #unbrokenCookie {
+    visibility: hidden;
+    display: none;
+}
+
+#cookieContainer:hover #brokenCookie {
+    visibility: visible;
+    display: block;
+}
+
+#fortuneMessage {
+    position: absolute;
+    width: 175px;
+    top: 130px;
+    left: 43px;
+    font-size: 0.65em;
+    vertical-align: middle;
+    visibility: hidden;
+}
+
+#cookieContainer:hover #fortuneMessage {
+    visibility: visible;
+}
+
+#errorContainer {
+    background-color: rgb(37, 37, 37);
+    color: white;
+    width: 80%;
+    margin: 35px auto;
+    padding: 5%;
+    border-radius: 20%;
+}
+
+@media all and (max-width: 1000px) {
+    #centerContainer {
+        grid-template-columns: 1fr;
+    }
+
+    #title {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    #jarImageSide {
+        grid-column: 1;
+        grid-row: 3;
+        padding-top: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #formSide {
+        grid-column: 1;
+        grid-row: 2;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+footer {
+    background-color: rgb(37, 37, 37);
+    color: white;
+    border-radius: 5px;
+    padding: 1px 5px;
+    font-size: 0.5em;
+}

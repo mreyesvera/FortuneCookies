@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--
+    Author: Silvia Mariana Reyesvera Quijano - 000813686 
+    Date: October 4th, 2020
+
+    This code displays a form to the user about settings for the fortune cookies display 
+    that will be shown when sent to the appropriate php file. 
+-->
+
+<html>
+
+<head>
+    <title>Fortune Cookies</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="cookiesstyles.css">
+    <script>
+        // changes the display cookie color when chooseing a different color
+        function changeCookieColor() {
+            document.getElementById('backgroundImg').style.backgroundColor = document.getElementById('color').value;
+        }
+    </script>
+</head>
+
+<body>
+    <div id="centerContainer">
+        <div id="title">
+            <h1>Fortune Cookies</h1>
+        </div>
+        <div id="jarImageSide">
+            <div id="backgroundImg">
+                <!-- Image for the display cookie -->
+                <img src="images/fortuneCookiesDisplay.png" alt="Empty Cookie Jar">
+            </div>
+        </div>
+        <div id="formSide">
+            <form method="GET" action="cookies.php">
+                <div id="nameField">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" maxlength="40" required>
+                </div>
+
+                <div id="amountField">
+                    <label for="amount">How many cookies do you want?</label>
+                    <input type="number" name="amount" min="1" max="50" value="1" required>
+                </div>
+
+                <div id="rangeField">
+                    <label id="rangeTitle">Range for your 7 lucky numbers:</label>
+
+                    <label for="min">min</label>
+                    <input type="number" name="min" min="0" max="994" required>
+
+                    <label for="max">max</label>
+                    <input type="number" name="max" min="6" max="1000" required>
+                </div>
+
+                <div id="colorField">
+                    <label for="color">Cookie's color:</label>
+                    <input id="color" type="color" name="color" onchange="changeCookieColor()" required>
+                </div>
+
+                <div id="submitField">
+                    <!-- Submmit button is represented by images of a cookie jar
+                    alternating depending on whether the mouse is hovering over it or not-->
+                    <img id="normalSubmitImg" src="images/submit1.png" alt="submit">
+                    <img id="hoverSubmitImg" src="images/submit2.png" alt="submit">
+                    <input type="submit" value="Submit">
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+    <footer>
+        <p>Background creator application: flaticon.com/pattern/</p>
+    </footer>
+
+</body>
+
+</html>
